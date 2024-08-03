@@ -39,12 +39,10 @@ class House:
         return House(self.name, self.number_of_floors)
 
     def __iadd__(self, other):
-        self.number_of_floors = self.number_of_floors + other
-        return House(self.name, self.number_of_floors)
+        return self.__add__(other)
 
     def __radd__(self, other):
-        self.number_of_floors = self.number_of_floors + other
-        return House(self.name, self.number_of_floors)
+        return self.__add__(other)
 
 
 h1 = House('ЖК Эльбрус', 10)
